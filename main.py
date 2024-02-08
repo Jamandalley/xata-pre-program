@@ -1,4 +1,6 @@
-
+# The Calculator Module developed with python by: 
+# name: Abimbade Jamiu A., 
+# email: jamiuabimbade@gmail.com
 
 # The fastAPI module for collecting user full name 
 # This is a Python module for a FastAPI web application. 
