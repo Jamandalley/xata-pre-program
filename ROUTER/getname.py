@@ -1,3 +1,6 @@
+from fastapi import APIRouter
+
+router = APIRouter()
 
 @router.get("/user/{first_name}/{last_name}")
 async def get_full_name(first_name: str, last_name: str):
