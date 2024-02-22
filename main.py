@@ -1,14 +1,14 @@
-# The Calculator Module developed with python by: 
-# name: Abimbade Jamiu A., 
+# Author Name: Abimbade Jamiu A., 
 # email: jamiuabimbade@gmail.com
+# API Documentation:  https://fastapi.tiangolo.com
+import uvicorn
+from fastapi import FastAPI
+from routers import get_fullname, get_pdf
 
-# The fastAPI module for collecting user full name 
-# This is a Python module for a FastAPI web application. 
-# It includes a router for handling PDF-related requests, which is imported from the getpdf module. 
-# The FastAPI app is created using FastAPI(), and the PDF router is included in the app using app.include_router().
+app = FastAPI()
 
-# You can find more information about FastAPI and its features in the official documentation: https://devdocs.io/fastapi/.
+app.include_router(get_fullname.router)
+app.include_router(get_pdf.router)
 
-# Today 14/02/2024, created an endpoint to allow user upload pdf files and save directly to the local disk. The endpoint is contained in getpdf.py
-# name: Abimbade Jamiu A.
-# email: jamiuabimbade@gmail.com
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
